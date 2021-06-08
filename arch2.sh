@@ -23,7 +23,7 @@ notRoot
 isArch
 installPrerequisites
 
-pacman -s nano
+pacman -S nano
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà mostratata la lista dei linguaggi, in ordine alfabetico. Decommentare \"it_IT.UTF-8\" e salvare" 40 60
 nano /etc/locale.gen
 locale-gen
