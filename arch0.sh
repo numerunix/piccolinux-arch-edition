@@ -11,7 +11,7 @@ fi
 function isArch {
 os=`cat /etc/os-release | grep -w "NAME" | cut -d = -f 2`; 
 if [[ $os != \""Arch Linux"\" ]]; then         
-echo non sei su arch linux;   
+echo  "non sei su arch linux";   
 exit 1
 fi;
 }
