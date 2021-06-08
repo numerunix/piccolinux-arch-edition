@@ -22,7 +22,10 @@ fi;
 notRoot
 isArch
 installPrerequisites
-
+dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Copyright(c) 2021 Giulio Sorrentino\nBNessun diritto riservato.\nTutti gli scripts vengono dati senza nessuna garanzia, sono usatia vostro rischio e pricolo.\nDedicati a tutti i lavoratori del birdys bakery di vico belle donne a chiaia e portici via bella vista." 40 60
+dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Impostiamo il fuso orario su Roma." 40 60
+ln -sf /usr/share/zoneinfo/Italy/Rome /etc/localtime
+hwclock --systohc
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Abilitiamo la rete" 40 60
 systemctl enable NetworkManager
