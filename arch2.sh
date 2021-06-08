@@ -23,11 +23,6 @@ notRoot
 isArch
 installPrerequisites
 
-
-dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Impostiamo il fuso orario su Roma." 40 60
-ln -sf /usr/share/zoneinfo/Italy/Rome /etc/localtime
-hwclock --systohc
-
 pacman -s nano
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà mostratata la lista dei linguaggi, in ordine alfabetico. Decommentare \"it_IT.UTF-8\" e salvare" 40 60
 nano /etc/locale.gen
