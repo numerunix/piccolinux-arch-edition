@@ -11,7 +11,15 @@ fi
 function installPrerequisites {
 pacman -S dialog 
 }
+
+function isArch {
+os=`cat /etc/os-release | grep -w "NAME" | cut -d = -f 2`; 
+if [[ $os != \""Arch Linux"\" ]]; then         
+echo non sei su arch linux;     
+fi;
+}
 notRoot
+isArch
 installPrerequisites
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso dinstalliamo il sistema base." 40 60

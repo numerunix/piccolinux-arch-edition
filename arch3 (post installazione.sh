@@ -1,6 +1,6 @@
 !#/bin/bash
-#autore Giulio Sorrentino
-#Concesso in licenza sotto la GPL V3
+#Autore: Giulio Sorrentino <gsorre64@gmail.com>
+#Concesso in licenza sotto la GPL v3
 function notRoot {
 if [[ $EUID -ne 0 ]]; then
 	echo "Lo script deve essere avviato da root"
@@ -11,8 +11,17 @@ fi
 function installPrerequisites {
 pacman -S dialog 
 }
+
+function isArch {
+os=`cat /etc/os-release | grep -w "NAME" | cut -d = -f 2`; 
+if [[ $os != \""Arch Linux"\" ]]; then         
+echo non sei su arch linux;     
+fi;
+}
 notRoot
+isArch
 installPrerequisites
+
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Abilitiamo la rete" 40 60
 systemctl enable NetworkManager

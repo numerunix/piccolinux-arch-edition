@@ -8,12 +8,21 @@ if [[ $EUID -ne 0 ]]; then
 fi
 }
 
+function isArch {
+os=`cat /etc/os-release | grep -w "NAME" | cut -d = -f 2`; 
+if [[ $os != \""Arch Linux"\" ]]; then         
+echo non sei su arch linux;     
+fi;
+}
+
+
 function installPrerequisites {
 pacman -Sy
 pacman -S dialog 
 }
 
 notRoot
+isArch
 installPrerequisites
 
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Verrà impostato l'italiano come lingua di tastiera nella sessione e verrà abilitato l'orario via rete." 40 60
