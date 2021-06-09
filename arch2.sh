@@ -35,8 +35,9 @@ echo "archlinux" > /etc/hostname
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Indicare la password di root." 40 60
 passwd
-dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso bisogna installare il boot loader e configurare la rete. Il boot loader dovrà essere inserito a mano nel bios. La rete si configura in maniwra automatica" 40 60
+dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso bisogna installare il boot loader e configurare la rete." 40 60
 pacman -S refind networkmanager
+/usr/bin/refind-install
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato cinnamon, lightdm, xorg, firefox, thunderbird, parcellite, keeepass, libreoffice, tilix e il driver per accedere alle partizioni ntfs" 40 60
 pacman -S cinnamon lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs3g fuse tilix 
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato l'oxccorrente per l'utilizzo dei reopsitory AUR" 40 60
