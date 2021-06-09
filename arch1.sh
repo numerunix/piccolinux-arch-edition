@@ -23,7 +23,7 @@ notRoot
 isArch
 installPrerequisites
 
-dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso dinstalliamo il sistema base." 40 60
+dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso installiamo il sistema base." 40 60
 pacstrap /mnt base linux linux-firmware
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso generiamo l'fstab." 40 60
 genfstab -U /mnt >> /mnt/etc/fstab
