@@ -39,7 +39,7 @@ dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox 
 pacman -S refind networkmanager
 /usr/bin/refind-install
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato cinnamon, lightdm, xorg, firefox, thunderbird, parcellite, keeepass, libreoffice, tilix e il driver per accedere alle partizioni ntfs" 40 60
-pacman -S cinnamon lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs3g fuse tilix 
+pacman -S cinnamon lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs-3g fuse tilix 
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato l'oxccorrente per l'utilizzo dei reopsitory AUR" 40 60
 pacman -S --needed base-devel
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Al riavvio non verrà ancora mostrata l'intrefaccia grafica e la rete sarà disabilitata. Avviatele con arch3.sh" 40 60
