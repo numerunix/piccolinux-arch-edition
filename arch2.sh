@@ -37,7 +37,7 @@ dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Indicare la p
 passwd
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso bisogna installare il boot loader e configurare la rete. Il boot loader dovrà essere inserito a mano nel bios. La rete si configura in maniwra automatica" 40 60
 pacman -S refind networkmanager
-dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato cinnamon, lightdm, xorg, firefox, thunderbird, parcellite, keeepass e libreoffice" 40 60
-pacman -S cinnamon lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice
+dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato cinnamon, lightdm, xorg, firefox, thunderbird, parcellite, keeepass, libreoffice e il driver per accedere alle partizioni ntfs" 40 60
+pacman -S cinnamon lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs3g fuse
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Al riavvio non verrà ancora mostrata l'intrefaccia grafica e la rete sarà disabilitata. Avviatele con arch3.sh" 40 60
 
