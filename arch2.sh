@@ -33,7 +33,7 @@ echo "KEYMAP=it" > /etc/vconsole.conf
 echo "archlinux" > /etc/hostname
 
 
-dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Indicare la password di root." 40 60
+dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Indicare la password di root. Nel pannello di controllo di cinnammon sarà possssibile aggiungere aktri utenti." 40 60
 passwd
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso bisogna installare il boot loader e configurare la rete." 40 60
 pacman -S refind networkmanager
