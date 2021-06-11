@@ -40,7 +40,7 @@ echo "#Autore Giulio Sorrentino <gsorre84@gmail.com>
 #Concesso in licenza secondo la GPL V3
 [Unit]
 Description=Firewall
-After=networkonline.target
+After=multi-user.target
 
 [Service]
 ExecStart=/bin/firewall.sh
@@ -51,8 +51,13 @@ WantedBy=multi-user.target" > /lib/systemd/system/firewall.service
 echo "#!/bin/sh
 #Autore Giulio Sorentino <gsorre84@gmail.com>
 #Concesso in licenza secondo la GPL V3
-iptables -A INPUT -i eth0 -j DROP
-iptables -A FORWARD -i eth0 -j DROP" > /bin/firewall.sh
+
+for i in `ls /sys/class/net`; do 
+if [ $i != "lo" ]; then
+ iptables -A INPUT -i $i -j DROP
+ iptables -A FORWARD -i $i -j DROP
+fi
+done" > /bin/firewall.sh
 chmod +x /bin/firewall.sh
 
 systemctl enable firewall
