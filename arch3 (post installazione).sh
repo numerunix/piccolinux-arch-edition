@@ -48,9 +48,7 @@ iptables -A OUTPUT -o lo -j ACCEPT
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
 pacman -S iptables-persistent
-
-systetl enable netfilter-persistent
-
+systemctl enable netfilter-persistent
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Inmpostiamo la tastiera italiana" 40 60
 localectl set-x11-keymap it pc105 winkeys
