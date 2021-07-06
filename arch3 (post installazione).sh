@@ -35,33 +35,19 @@ dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Staccare e ri
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Abilitiamo il firewall ricordatevi che se si è connessi col cavo parte prima la connessione e poi il firewall" 40 60
 
+# Set default chain policies
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
 
-echo "#Autore Giulio Sorrentino <gsorre84@gmail.com>
-#Concesso in licenza secondo la GPL V3
-[Unit]
-Description=Firewall
-After=multi-user.target
+# Accept on localhost
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
 
-[Service]
-ExecStart=/bin/firewall.sh
+# Allow established sessions to receive traffic
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
-[Install]
-WantedBy=multi-user.target" > /lib/systemd/system/firewall.service
-
-echo "#!/bin/sh
-#Autore Giulio Sorentino <gsorre84@gmail.com>
-#Concesso in licenza secondo la GPL V3
-
-for i in `ls /sys/class/net`; do 
-if [ $i != "lo" ]; then
- iptables -A INPUT -i $i -j DROP
- iptables -A FORWARD -i $i -j DROP
-fi
-done" > /bin/firewall.sh
-chmod +x /bin/firewall.sh
-
-systemctl enable firewall
-systemctl start firewall
+pacman -S iptables-persistent
 
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Inmpostiamo la tastiera italiana" 40 60
