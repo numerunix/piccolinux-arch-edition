@@ -47,8 +47,8 @@ iptables -A OUTPUT -o lo -j ACCEPT
 # Allow established sessions to receive traffic
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
-pacman -S iptables-persistent
-systemctl enable netfilter-persistent
+iptables-save > /etc/iptables/iptables.rules
+systemctl enable iptables
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Inmpostiamo la tastiera italiana" 40 60
 localectl set-x11-keymap it pc105 winkeys
