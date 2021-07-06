@@ -33,7 +33,7 @@ systemctl enable NetworkManager
 systemctl start NetworkManager
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Staccare e riattaccare il cavo di rete" 40 60
 
-dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Abilitiamo il firewall ricordatevi che se si è connessi col cavo parte prima la connessione e poi il firewall" 40 60
+dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Abilitiamo il firewall ricordatevi che se si è connessi col cavo parte prima la connessione e poi il firewall.\n IL firewall si basa su iptables-persistent." 40 60
 
 # Set default chain policies
 iptables -P INPUT DROP
