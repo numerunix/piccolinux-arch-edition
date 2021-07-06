@@ -26,10 +26,17 @@ notRoot
 isArch
 
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Alziamo il firewall." 40 60
-iptables -A INPUT -i enp31s0 -j DROP
-iptables -A FORWARD -i enp31s0 -j DROP
-iptables -A INPUT -i wlp37s0 -j DROP
-iptables -A FORWARD -i wlp37s0 -j DROP
+# Set default chain policies
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+
+# Accept on localhost
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
+
+# Allow established sessions to receive traffic
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 installPrerequisites
 
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Verrà impostato l'italiano come lingua di tastiera nella sessione e verrà abilitato l'orario via rete." 40 60
