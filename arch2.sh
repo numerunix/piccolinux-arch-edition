@@ -39,7 +39,7 @@ dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox 
 pacman -S refind networkmanager
 /usr/bin/refind-install
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato cinnamon, lightdm, xorg, firefox, thunderbird, parcellite, keeepass, libreoffice, tilix e il driver per accedere alle partizioni ntfs e al cellulare" 40 60
-pacman -S cinnamon lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs-3g fuse tilix  gvfs gvfs-mtp vlc gcalculator atril eog man-db
+pacman -S cinnamon lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs-3g fuse tilix  gvfs gvfs-mtp vlc gcalculator atril eog man-db iptables-persistent
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato l'oxccorrente per l'utilizzo dei reopsitory AUR" 40 60
 pacman -S --needed base-devel vi
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Per configurare sudo digitare visudo a sistema avviato e decommentare la riga\n\"%wheel ALL=(ALL) ALL\"\n perché il gestore di utenti di cinnammon imposta l'utente nel gruppo wheel" 40 60
