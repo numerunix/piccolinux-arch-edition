@@ -81,6 +81,7 @@ dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Impostiamo il
 ln -sf /usr/share/zoneinfo/Italy/Rome /etc/localtime
 hwclock --systohc
 timedatectl set-local-rtc 1 --adjust-system-clock
+systemctl start ntpd
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Impostiamo la tastiera italiana" 40 60
 localectl set-x11-keymap it pc105 winkeys
