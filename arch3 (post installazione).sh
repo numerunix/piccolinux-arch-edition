@@ -55,8 +55,6 @@ localectl set-keymap it
 
 
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà abilitato lightdm. L'orologio di sistema è basato su UTC, aprire le impostazioni e cliccare fisicamente su Roma sulla mappa che compare per avere l'orario italiano." 40 60
-systemct enable ntpd
-systemctl start ntpd
 hwclock --systohc
-systemctl enable lightdm
-systemctl start lightdm
+systemctl enable cronie atd ntpd lightdm
+systemctl start cronie atd ntpd lightdm
