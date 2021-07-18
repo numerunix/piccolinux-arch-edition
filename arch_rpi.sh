@@ -81,8 +81,6 @@ dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Impostiamo il
 ln -sf /usr/share/zoneinfo/Italy/Rome /etc/localtime
 hwclock --systohc
 timedatectl set-local-rtc 1 --adjust-system-clock
-systemctl start ntpd
-systemctl enable ntpd
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Impostiamo la tastiera italiana" 40 60
 localectl set-x11-keymap it pc105 winkeys
@@ -90,5 +88,5 @@ localectl set-keymap it
 
 
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà abilitato lightdm. Ricordatevi di decommentare il gruppo wheel su visudo perché alarm fa parte di quel gruppo." 40 60
-systemctl enable lightdm
-systemctl start lightdm
+systemctl enable ntpd cronie atd lightdm
+systemctl start ntpd cronie atd lightdm
