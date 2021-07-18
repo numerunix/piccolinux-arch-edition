@@ -25,7 +25,6 @@ installPrerequisites
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Copyright(c) 2021 Giulio Sorrentino\nNessun diritto riservato.\nTutti gli scripts vengono dati senza nessuna garanzia, sono usati a vostro rischio e pricolo.\nSe ti piace considera una donazione su github.\nDedicati a tutti i lavoratori del birdys bakery di vico belle donne a chiaia e portici via bella vista." 40 60
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Impostiamo il fuso orario su Roma." 40 60
 ln -sf /usr/share/zoneinfo/Italy/Rome /etc/localtime
-hwclock --systohc
 timedatectl set-local-rtc 1 --adjust-system-clock
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Abilitiamo la rete" 40 60
@@ -58,5 +57,6 @@ localectl set-keymap it
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà abilitato lightdm. L'orologio di sistema è basato su UTC, aprire le impostazioni e cliccare fisicamente su Roma sulla mappa che compare per avere l'orario italiano." 40 60
 systemct enable ntpd
 systemctl start ntpd
+hwclock --systohc
 systemctl enable lightdm
 systemctl start lightdm
