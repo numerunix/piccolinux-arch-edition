@@ -73,7 +73,7 @@ pacman -S networkmanager
 systemctl start networkmanager
 systemctl enable networkmanager
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato xfce, lightdm, xorg, firefox, thunderbird, parcellite, keeepass, libreoffice, tilix e il driver per accedere alle partizioni ntfs e al cellulare" 40 60
-pacman -S xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs-3g fuse tilix  gvfs gvfs-mtp vlc galculator atril eog man-db gnome-disk-utility gparted
+pacman -S xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs-3g fuse tilix  gvfs gvfs-mtp vlc galculator atril eog man-db gnome-disk-utility gparted cups cron at ntp
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato l'occorrente per l'utilizzo dei repository AUR" 40 60
 pacman -S --needed base-devel vi
 #dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Per configurare sudo digitare visudo a sistema avviato e decommentare la riga\n\"%wheel ALL=(ALL) ALL\"\n perché il gestore di utenti di cinnammon imposta l'utente nel gruppo wheel" 40 60
