@@ -1,4 +1,4 @@
-#!/bin/bash
+!#/bin/bash
 #Autore: Giulio Sorrentino <gsorre64@gmail.com>
 #Concesso in licenza sotto la GPL v3
 function notRoot {
@@ -54,7 +54,7 @@ localectl set-x11-keymap it pc105 winkeys
 localectl set-keymap it
 
 
-dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà abilitato lightdm. L'orologio di sistema è basato su UTC, aprire le impostazioni e cliccare fisicamente su Roma sulla mappa che compare per avere l'orario italiano." 40 60
+dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà abilitato lightdm." 40 60
 hwclock --systohc
 systemctl enable cronie atd ntpd lightdm
 systemctl start cronie atd ntpd lightdm
