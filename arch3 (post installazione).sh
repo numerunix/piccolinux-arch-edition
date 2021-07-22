@@ -52,7 +52,20 @@ systemctl enable iptables
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Inmpostiamo la tastiera italiana" 40 60
 localectl set-x11-keymap it pc105 winkeys
 localectl set-keymap it
+result=1
+while [[ $result -eq 1 ]]; do
+dialog --title "inserire Nome Utente" \
+--backtitle "Inserire nome Utente" \
+--inputbox "Inserire il nome utente dell'utente non privilegiato da aggiungere" 8 60 2>/tmp/result.txt
+result=$?
+done
+user=`cat /tmp/result.txt`
+rm /tmp/result.txt
 
+useradd $user -m
+passwd $user
+echo "Premere invio per continuare..."
+read dummy
 
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà abilitato lightdm." 40 60
 hwclock --systohc
