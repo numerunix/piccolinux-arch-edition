@@ -18,8 +18,7 @@ fi;
 
 
 function installPrerequisites {
-pacman -Sy
-pacman -S dialog 
+pacman -Sy dialog 
 }
 
 notRoot
