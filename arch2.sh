@@ -41,7 +41,7 @@ dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox 
 pacman -S --needed base-devel vi
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Per configurare sudo digitare visudo a sistema avviato e decommentare la riga\n\"%wheel ALL=(ALL) ALL\"" 40 60
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso bisogna installare il boot loader e configurare la rete." 40 60
-pacman -S grub networkmanager
+pacman -S grub bootefimgr networkmanager
 grub-install --target=x86_64-efi --efi-directory=/boot/efi/ --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Al riavvio non verrà ancora mostrata l'intrefaccia grafica e la rete sarà disabilitata. Avviatele con arch3.sh" 40 60
