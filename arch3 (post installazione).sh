@@ -26,6 +26,7 @@ dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Copyright(c) 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Impostiamo il fuso orario su Roma." 40 60
 ln -sf /usr/share/zoneinfo/Italy/Rome /etc/localtime
 timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl set-timezone Europe/Rome
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Abilitiamo la rete" 40 60
 systemctl enable NetworkManager
