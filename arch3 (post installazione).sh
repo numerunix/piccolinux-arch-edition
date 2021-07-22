@@ -66,7 +66,10 @@ useradd $user -m
 passwd $user
 echo "Premere invio per continuare..."
 read dummy
-usermod -aG wheel audio storage disk $user
+usermod -aG wheel $user
+usermod -aG audio $user
+usermod -aG storage $user
+usermod -aG disk $user
 
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà abilitato lightdm." 40 60
 hwclock --systohc
