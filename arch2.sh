@@ -9,7 +9,7 @@ fi
 }
 
 function installPrerequisites {
-pacman -S dialog 
+pacman -Sy dialog 
 }
 
 function isArch {
