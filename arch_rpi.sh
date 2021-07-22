@@ -66,8 +66,12 @@ echo "archlinux" > /etc/hostname
 
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Indicare la password di root." 40 60
 passwd
+echo -n "Premere invio per continuare..."
+read dummy;
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Indicare la password di alarm." 40 60
 passwd alarm
+echo -n "Premere invio per continuare..."
+read dummy;
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso bisogna configurare la rete." 40 60
 pacman -S networkmanager
 systemctl start networkmanager
