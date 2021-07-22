@@ -33,9 +33,9 @@ echo "KEYMAP=it" > /etc/vconsole.conf
 echo "archlinux" > /etc/hostname
 
 
-dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Indicare la password di root. A sistema avviato sarà possssibile aggiungere altri utenti." 40 60
+dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Indicare la password di root. A sistema avviato sarà possibile aggiungere altri utenti." 40 60
 passwd
-dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato cinnamon, lightdm, xorg, firefox, thunderbird, parcellite, keeepass, libreoffice, tilix e il driver per accedere alle partizioni ntfs e al cellulare" 40 60
+dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato xfce, lightdm, xorg, firefox, thunderbird, parcellite, keeepass, libreoffice, tilix e il driver per accedere alle partizioni ntfs e al cellulare" 40 60
 pacman -S xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs-3g fuse tilix  gvfs gvfs-mtp vlc galculator atril eog man-db gedit file-roller gnome-disk-utility gparted cups netcat cron at ntp logrotate
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato l'occorrente per l'utilizzo dei reopsitory AUR" 40 60
 pacman -S --needed base-devel vi
