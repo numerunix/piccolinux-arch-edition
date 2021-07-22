@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 #autore: Giulio Sorrentino <gsorre84@gmail.com>
 #Concesso in licenza sotto la gplv3
 function notRoot {
