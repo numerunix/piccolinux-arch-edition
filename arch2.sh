@@ -41,8 +41,6 @@ dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox 
 pacman -S xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xorg-server xorg-server-common firefox thunderbird parcellite keepass libreoffice ntfs-3g fuse tilix  gvfs gvfs-mtp vlc galculator atril eog man-db gedit file-roller gnome-disk-utility gparted cups netcat cron at ntp logrotate
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato l'occorrente per l'utilizzo dei reopsitory AUR" 40 60
 pacman -S --needed base-devel vi
-dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso decommentare la riga\n\"%wheel ALL=(ALL) ALL\", poi premere esc e :wq" 40 60
-visudo
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso bisogna installare il boot loader e configurare la rete." 40 60
 pacman -S grub bootefimgr networkmanager
 grub-install --target=x86_64-efi --efi-directory=/boot/efi/ --bootloader-id=grub
