@@ -25,7 +25,7 @@ pacman -S dialog
 notRoot
 isArch
 installPrerequisites
-dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Copyright(c) 2021 Giulio Sorrentino\nNessun diritto riservato.\nTutti gli scripts vengono dati senza nessuna garanzia, sono usati a vostro rischio e pricolo.\nSe ti piace considera una donazione su paypal.\nDedicato a ilaria." 40 60
+dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Copyright(c) 2021 Giulio Sorrentino\nNessun diritto riservato.\nTutti gli scripts vengono dati senza nessuna garanzia, sono usati a vostro rischio e pricolo.\nSe ti piace considera una donazione su paypal.\nDedicato a Ilaria, una mia vecchia compagna di classe, con cui ci siamo rivisti tempo fa." 40 60
 
 
 pacman-key --init
