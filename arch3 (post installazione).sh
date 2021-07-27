@@ -22,7 +22,7 @@ fi;
 notRoot
 isArch
 installPrerequisites
-dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Copyright(c) 2021 Giulio Sorrentino\nNessun diritto riservato.\nTutti gli scripts vengono dati senza nessuna garanzia, sono usati a vostro rischio e pricolo.\nSe ti piace considera una donazione su paypal.\nDedicati a tutti i lavoratori del birdys bakery di vico belle donne a chiaia e portici via bella vista, anche gli ex." 40 60
+dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Copyright(c) 2021 Giulio Sorrentino\nNessun diritto riservato.\nTutti gli scripts vengono dati senza nessuna garanzia, sono usati a vostro rischio e pricolo.\nSe ti piace considera una donazione su paypal.\nDedicati a tutti i lavoratori del birdys bakery di vico belle donne a chiaia e portici via bella vista, anche gli ex davide, annachiara e giacomo." 40 60
 dialog --title "Informazioni" --backtitle "Informazioni" --msgbox "Impostiamo il fuso orario su Roma." 40 60
 timedatectl set-local-rtc 1 --adjust-system-clock
 timedatectl set-timezone Europe/Rome
