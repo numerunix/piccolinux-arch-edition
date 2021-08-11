@@ -77,3 +77,6 @@ dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox 
 hwclock --systohc
 systemctl enable cronie atd ntpd lightdm
 systemctl start cronie atd ntpd lightdm
+sytsemctl disable systemd-coredump.socket systemd-udevd-kernel.socket systemd-udevd-kernel.socket systemd-udevd-control.socket
+sytsemctl stop systemd-coredump.socket systemd-udevd-kernel.socket systemd-udevd-kernel.socket systemd-udevd-control.socket
+
