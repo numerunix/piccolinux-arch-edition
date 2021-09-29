@@ -42,7 +42,7 @@ pacman -S xfce4 xfce4-goodies lightdm lightdm-gtk-greeter xorg-server xorg-serve
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso verrà installato l'occorrente per l'utilizzo dei reopsitory AUR" 40 60
 pacman -S --needed base-devel vi
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Adesso bisogna installare il boot loader e configurare la rete." 40 60
-pacman -S grub bootefimgr networkmanager
+pacman -S grub networkmanager
 grub-install --target=x86_64-efi --efi-directory=/boot/efi/ --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 dialog --ascii-lines --title "Informazioni" --backtitle "Informazioni" --msgbox "Al riavvio non verrà ancora mostrata l'intrefaccia grafica e la rete sarà disabilitata. Avviatele con arch3.sh" 40 60
